@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- SweetAlert CDN -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+                                         <!-- LOGIN -->
+
+<div id="loginPage">
+
+<h2>Login</h2>
+
+<input type="email" id="loginEmail" placeholder="Email">
+
+<input type="password" id="loginPassword" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>No account? <a href="#" onclick="showSignup()">Signup</a></p>
+
+</div>
+
+
+                                          <!-- SIGNUP -->
+
+<div id="signupPage" class="hidden">
+
+<h2>Create Account</h2>
+
+<input type="email" id="signupEmail" placeholder="Email">
+
+<input type="password" id="signupPassword" placeholder="Password">
+
+<button onclick="signup()">Signup</button>
+
+<p>Already account? <a href="#" onclick="showLogin()">Login</a></p>
+
+</div>
+
+
+                                          <!-- DASHBOARD -->
+
+<div id="dashboard" class="hidden">
+
+<h2>Post Dashboard</h2>
+
+<textarea id="postText" placeholder="Write something"></textarea>
+
+<input type="file" id="fileInput" onchange="previewFile()">
+
+<div id="preview"></div>
+
+<br>
+
+<button onclick="addPost()">Add Post</button>
+
+<div id="posts"></div>
+
+</div>
+
+</div>
+
+<script src="./javascript.js"></script>
+</body>
+</html>
